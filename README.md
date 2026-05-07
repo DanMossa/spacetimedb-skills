@@ -132,7 +132,6 @@ spacetime logs
 spacetimedb-skills/
   README.md
   AGENTS.md                 # Guidance for agents editing this repo
-  pixi-readme.md            # PixiJS README used as the style reference
   src/
     build-raw-data.ts
     raw-data-output/         # Raw SpacetimeDB Markdown docs copied into skills
