@@ -8,6 +8,7 @@
   "license": "MIT",
   "packageManager": "pnpm@10.32.1",
   "devDependencies": {
+    "@types/node": "^25.6.1",
     "node-html-parser": "^7.1.0",
     "prettier": "3.8.3",
     "typescript": "^6.0.3"

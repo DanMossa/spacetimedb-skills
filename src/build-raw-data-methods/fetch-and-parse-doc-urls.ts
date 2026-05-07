@@ -1,9 +1,14 @@
 import { HTMLElement, parse } from "node-html-parser";
 
+
+/**
+ * Example of href: '/docs/tutorials/unreal/part-1'
+ */
 export type DocUrl = {
   pageTitle: string;
   href: string;
 };
+
 const DOCS_URL = "https://spacetimedb.com/docs/";
 const DOCS_ORIGIN = "https://spacetimedb.com";
 
