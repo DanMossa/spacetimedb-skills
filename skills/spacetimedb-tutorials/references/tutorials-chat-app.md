@@ -4,11 +4,7 @@ slug: /tutorials/chat-app
 id: chat-app
 toc_max_heading_level: 2
 ---
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 import { InstallCardLink } from "@site/src/components/InstallCardLink";
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
 
 
 In this tutorial, we'll implement a simple chat server as a SpacetimeDB module. You can write your module in TypeScript, C#, or Rust - use the tabs throughout this guide to see code examples in your preferred language.

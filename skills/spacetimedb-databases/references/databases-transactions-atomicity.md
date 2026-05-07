@@ -3,10 +3,6 @@ title: Transactions and Atomicity
 slug: /databases/transactions-atomicity
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
-
 
 SpacetimeDB provides strong transactional guarantees for all database operations. Every [reducer](../00200-functions/00300-reducers/00300-reducers.md) runs inside a database transaction, ensuring your data remains consistent and reliable even under concurrent load.
 

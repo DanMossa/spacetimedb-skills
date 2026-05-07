@@ -3,10 +3,6 @@ title: Procedures
 slug: /functions/procedures
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
-
 
 A **procedure** is a function exported by a [database](../00100-databases.md), similar to a [reducer](./00300-reducers/00300-reducers.md).
 Connected [clients](../00600-clients.md) can call procedures.

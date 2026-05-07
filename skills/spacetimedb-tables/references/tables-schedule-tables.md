@@ -3,10 +3,6 @@ title: Schedule Tables
 slug: /tables/schedule-tables
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
-
 
 Tables can trigger [reducers](../00200-functions/00300-reducers/00300-reducers.md) or [procedures](../00200-functions/00400-procedures.md) at specific times by including a special scheduling column. This allows you to schedule future actions like sending reminders, expiring items, or running periodic maintenance tasks.
 

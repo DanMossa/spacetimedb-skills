@@ -3,10 +3,6 @@ title: Key Architecture
 slug: /intro/key-architecture
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
-
 ## Host
 
 A SpacetimeDB **host** is a server that hosts [databases](#database). You can run your own host, or use the SpacetimeDB maincloud. Many databases can run on a single host.

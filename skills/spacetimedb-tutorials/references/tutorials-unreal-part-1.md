@@ -3,10 +3,6 @@ title: 1 - Setup
 slug: /tutorials/unreal/part-1
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
-
 
 Need help with the tutorial? [Join our Discord server](https://discord.gg/spacetimedb)!
 

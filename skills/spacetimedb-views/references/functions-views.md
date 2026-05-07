@@ -3,10 +3,6 @@ title: Views
 slug: /functions/views
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
-
 
 Views are read-only functions that compute and return results from your tables. Unlike [reducers](./00300-reducers/00300-reducers.md), views do not modify database state - they only query and return data. Views are useful for computing derived data, aggregations, or joining multiple tables before sending results to clients.
 

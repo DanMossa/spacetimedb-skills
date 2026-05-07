@@ -3,10 +3,6 @@ title: Maincloud
 slug: /how-to/deploy/maincloud
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
-
 Maincloud is SpacetimeDB's fully managed serverless platform. It handles infrastructure, scaling, replication, and backups so you can focus on building your application. Maincloud scales to zero when your database is idle, so you only pay for what you use.
 
 For pricing details, see the [pricing page](https://spacetimedb.com/pricing).

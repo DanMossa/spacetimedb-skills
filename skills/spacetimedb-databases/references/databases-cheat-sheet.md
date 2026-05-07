@@ -3,10 +3,6 @@ title: Cheat Sheet
 slug: /databases/cheat-sheet
 ---
 
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 Quick reference for SpacetimeDB module syntax across Rust, C#, and TypeScript.
 

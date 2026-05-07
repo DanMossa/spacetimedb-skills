@@ -3,10 +3,6 @@ title: 3 - Gameplay
 slug: /tutorials/unreal/part-3
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
-
 
 Need help with the tutorial? [Join our Discord server](https://discord.gg/spacetimedb)!
 

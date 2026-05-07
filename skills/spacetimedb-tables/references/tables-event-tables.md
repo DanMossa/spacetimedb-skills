@@ -3,9 +3,6 @@ title: Event Tables
 slug: /tables/event-tables
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 In many applications, particularly games and real-time systems, modules need to notify clients about things that happened without storing that information permanently. A combat system might need to tell clients "entity X took 50 damage" so they can display a floating damage number, but there is no reason to keep that record in the database after the moment has passed.
 
 Event tables provide exactly this capability. An event table is a table whose rows are inserted and then immediately deleted by the database: they exist only for the duration of the transaction that created them. When the transaction commits, the rows are broadcast to subscribed clients and then deleted from the table. Between transactions, the table is always empty.

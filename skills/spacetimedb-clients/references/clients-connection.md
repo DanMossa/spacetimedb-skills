@@ -3,9 +3,6 @@ title: Connecting to SpacetimeDB
 slug: /clients/connection
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 After [generating client bindings](./00200-codegen.md) for your module, you can establish a connection to your SpacetimeDB [database](../00100-databases.md) from your client application. The `DbConnection` type provides a persistent WebSocket connection that enables real-time communication with the server.
 
 ## Prerequisites

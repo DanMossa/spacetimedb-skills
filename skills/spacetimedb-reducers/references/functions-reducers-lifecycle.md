@@ -3,10 +3,6 @@ title: Lifecycle Reducers
 slug: /functions/reducers/lifecycle
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
-
 
 Special reducers handle system events during the database lifecycle.
 

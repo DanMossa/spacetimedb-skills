@@ -3,9 +3,6 @@ title: Migrating from 1.0 to 2.0
 slug: /upgrade
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 # Migrating from SpacetimeDB 1.0 to 2.0
 
 This guide covers the breaking changes between SpacetimeDB 1.0 and 2.0 and how to update your code.

@@ -3,10 +3,6 @@ title: 2 - Connecting to SpacetimeDB
 slug: /tutorials/unreal/part-2
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
-
 
 Need help with the tutorial? [Join our Discord server](https://discord.gg/spacetimedb)!
 

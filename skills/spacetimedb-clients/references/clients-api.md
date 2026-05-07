@@ -3,9 +3,6 @@ title: SDK API Overview
 slug: /clients/api
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 
 The SpacetimeDB client SDKs provide a comprehensive API for interacting with your [database](../00100-databases.md). After [generating client bindings](./00200-codegen.md) and [establishing a connection](./00300-connection.md), you can query data, invoke server functions, and observe real-time changes.
 

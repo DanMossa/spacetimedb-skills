@@ -3,9 +3,6 @@ title: 1 - Setup
 slug: /tutorials/unity/part-1
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 
 ![Unity Tutorial Hero Image](/images/unity/part-1-hero-image.png)
 

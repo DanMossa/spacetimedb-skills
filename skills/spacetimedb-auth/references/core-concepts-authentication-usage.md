@@ -1,9 +1,5 @@
 # Using Auth Claims
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
-
 SpacetimeDB allows you to easily access authentication (auth) claims embedded in
 OIDC-compliant JWT tokens. Auth claims are key-value pairs that provide
 information about the authenticated user. For example, they may contain a user's

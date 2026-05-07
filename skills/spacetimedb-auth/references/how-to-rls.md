@@ -3,9 +3,6 @@ title: Row Level Security
 slug: /how-to/rls
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 
 :::danger Experimental Feature - Use Views Instead
 **Row Level Security is an experimental, unstable feature.** The API may change or be removed in future releases.

@@ -3,10 +3,6 @@ title: 4 - Moving and Colliding
 slug: /tutorials/unreal/part-4
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
-
 
 Need help with the tutorial? [Join our Discord server](https://discord.gg/spacetimedb)!
 

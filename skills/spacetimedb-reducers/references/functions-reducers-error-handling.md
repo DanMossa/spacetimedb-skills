@@ -3,10 +3,6 @@ title: Error Handling
 slug: /functions/reducers/error-handling
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
-
 
 ## Error Handling
 

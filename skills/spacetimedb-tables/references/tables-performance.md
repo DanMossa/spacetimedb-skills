@@ -3,10 +3,6 @@ title: Performance Best Practices
 slug: /tables/performance
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
-
 
 Follow these guidelines to optimize table performance in your SpacetimeDB modules.
 

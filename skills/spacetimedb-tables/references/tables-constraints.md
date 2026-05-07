@@ -3,10 +3,6 @@ title: Constraints
 slug: /tables/constraints
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
-
 
 Constraints enforce data integrity rules on your tables. SpacetimeDB supports primary key and unique constraints.
 

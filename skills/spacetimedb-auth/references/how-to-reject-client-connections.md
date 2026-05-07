@@ -2,10 +2,6 @@
 slug: /how-to/reject-client-connections
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-import { CppModuleVersionNotice } from "@site/src/components/CppModuleVersionNotice";
-
 # Reject Client Connections
 
 SpacetimeDB provides a way to disconnect a client during a client connection attempt.
