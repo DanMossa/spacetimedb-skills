@@ -6,6 +6,16 @@ license: MIT
 
 Use this skill for SpacetimeDB 1.0 to 2.0 migration work.
 
+## Core migration checks
+
+- Reducer callbacks changed. Prefer event tables for durable, subscribable result notifications; use per-call `_then()` style callbacks only when the guide's limitations are acceptable.
+- Event types changed. Update client event handling before assuming old reducer-result event shapes still exist.
+- Subscription APIs and table accessor names changed. Regenerate bindings and update calls to the generated names rather than patching guessed identifiers.
+- Clients connect by database name or identity, not the old module naming assumptions.
+- In Rust and C++, `sender` is now a method: use `ctx.sender()`. TypeScript and C# property syntax is unchanged.
+- Only primary keys get generated update methods. For other changes, update through the primary-key index or delete and insert when the primary key changes.
+- Scheduled functions, private codegen, light mode, `CallReducerFlags`, and confirmed reads all have separate migration notes. Load the guide section before editing those areas.
+
 ## Reference map
 
 | Need                          | Open                                           |

@@ -6,6 +6,35 @@ license: MIT
 
 Use this skill for Unreal Engine client implementation.
 
+## Core Unreal patterns
+
+Generate Unreal bindings with the project module details:
+
+```bash
+spacetime generate --lang unrealcpp --uproject-dir path/to/Game.uproject --module-path spacetimedb --unreal-module-name Game
+```
+
+Connection shape:
+
+```cpp
+UDbConnection* Conn = UDbConnection::Builder()
+    ->WithUri(TEXT("ws://localhost:3000"))
+    ->WithDatabaseName(TEXT("my-database"))
+    ->OnConnect(OnConnectDelegate)
+    ->OnConnectError(OnConnectErrorDelegate)
+    ->OnDisconnect(OnDisconnectDelegate)
+    ->Build();
+```
+
+## Runtime rules
+
+- The Unreal SDK processes messages automatically through WebSocket callbacks and `UDbConnection` ticking; do not add a manual polling loop unless the project already has one.
+- Use generated `Conn->Db` table objects for subscribed cache reads and `Conn->Reducers` for reducer calls.
+- Bind `OnInsert`, `OnDelete`, `OnUpdate`, and reducer delegates before subscribing when startup events matter.
+- `SubscribeToAllTables()` is useful for examples; production code should subscribe to specific SQL/query sets.
+- Use generated Unreal class and delegate names from the project. Do not copy sample `UUserTable` or `FUserType` identifiers unless they exist locally.
+- Keep plugin setup, generated code, and gameplay classes separate unless the existing project layout combines them.
+
 ## Reference map
 
 | Need           | Open                                                         |

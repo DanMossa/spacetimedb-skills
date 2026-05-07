@@ -10,8 +10,19 @@ Entry point for the SpacetimeDB skill collection. SpacetimeDB combines a databas
 
 1. Find the specialized skill in the router below that best matches the task.
 2. Load that skill's `SKILL.md` and follow its guidance.
-3. Open only the referenced Markdown files needed for the user's task.
-4. If no sub-skill fits, search the copied references under this collection before falling back to external docs.
+3. Open only the referenced Markdown files that match the current subtask.
+4. If no sub-skill fits, search copied references in the most likely skill before falling back to external docs.
+
+Do not load every SpacetimeDB reference file by default. Start with the focused skill body, then load a reference only when the body says the details are needed or the task requires exact API syntax.
+
+## Core model
+
+- A database is a published instance of a module; the module defines tables, reducers, procedures, views, and public client surface.
+- Tables store state. Public tables can be subscribed to by clients; private tables are server-only unless exposed through views or reducers.
+- Reducers are transactional entrypoints for state changes. Failed reducers roll back their table mutations.
+- Procedures can return values and perform external work such as HTTP requests; open transactions explicitly when they need database writes.
+- Views expose derived, read-only data. Prefer anonymous views when the result does not depend on the caller.
+- Clients use generated bindings, connect with `DbConnection`, subscribe to rows, read the local cache, and invoke reducers or procedures.
 
 For longer descriptions and trigger keywords for every skill, see [references/index.md](references/index.md).
 

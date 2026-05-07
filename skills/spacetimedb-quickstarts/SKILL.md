@@ -6,6 +6,26 @@ license: MIT
 
 Use this skill for first-contact SpacetimeDB work and framework quickstarts.
 
+## Core flow
+
+1. Install the `spacetime` CLI and run `spacetime login` for Maincloud publishing.
+2. For local development, start standalone with `spacetime start`; it listens on port `3000` by default and does not support SSL.
+3. Create or open a project, build/publish the module, generate client bindings, then connect the client to the database name.
+4. Keep server module language, package manager, database name, module path, and generated binding path consistent across all commands.
+
+Use `spacetime dev` for integrated local loops when possible:
+
+```bash
+spacetime dev --template basic-ts
+```
+
+Use focused skills once the quickstart reaches implementation details:
+
+- Tables and schema: [spacetimedb-tables](../spacetimedb-tables/SKILL.md)
+- Reducers and transactions: [spacetimedb-reducers](../spacetimedb-reducers/SKILL.md)
+- Client SDK code: the matching language-specific client skill
+- Publish and migration behavior: [spacetimedb-databases](../spacetimedb-databases/SKILL.md)
+
 ## Reference map
 
 | Need                                        | Open                                     |
