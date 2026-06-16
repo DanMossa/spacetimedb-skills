@@ -1343,7 +1343,7 @@ const spacetimedb = schema(myTimer);
 
 // 1.0 - SUPERFLUOUS IN 2.0
 spacetimedb.reducer('runMyTimer', myTimer.rowType, (ctx, timer) => {
-  if (ctx.sender != ctx.identity) {
+  if (ctx.sender != ctx.databaseIdentity) {
     throw SenderError(`'runMyTimer' should only be invoked by the database!`);
   }
   // Do stuff
@@ -1380,7 +1380,7 @@ public partial struct MyTimer
 [SpacetimeDB.Reducer]
 public static void RunMyTimer(ReducerContext ctx, MyTimer timer)
 {
-    if (ctx.Sender != ctx.Identity)
+    if (ctx.Sender != ctx.DatabaseIdentity)
     {
         throw new Exception("`RunMyTimer` should only be invoked by the database!");
     }
@@ -1410,7 +1410,7 @@ struct MyTimer {
 // 1.0 - SUPERFLUOUS IN 2.0
 #[spacetimedb::reducer]
 fn run_my_timer(ctx: &ReducerContext, timer: MyTimer) -> Result<(), String> {
-    if ctx.sender() != ctx.identity() {
+    if ctx.sender() != ctx.database_identity() {
         return Err("`run_my_timer` should only be invoked by the database!".to_string());
     }
     // Do stuff...
@@ -1439,7 +1439,7 @@ SPACETIMEDB_SCHEDULE(my_timer, 1, run_my_timer);
 
 // 1.0 - SUPERFLUOUS IN 2.0
 SPACETIMEDB_REDUCER(run_my_timer, ReducerContext ctx, MyTimer timer) {
-    if (ctx.sender() != ctx.identity()) {
+    if (ctx.sender() != ctx.database_identity()) {
         return Err("`run_my_timer` should only be invoked by the database!");
     }
     // Do stuff...

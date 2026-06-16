@@ -294,7 +294,7 @@ export default spacetimedb;
 
 export const send_reminder = spacetimedb.reducer({ arg: scheduledTask.rowType }, (ctx, { arg }) => {
   // Only allow the scheduler (module identity) to call this
-  if (ctx.sender != ctx.identity) {
+  if (ctx.sender != ctx.databaseIdentity) {
     throw new SenderError('This reducer can only be called by the scheduler');
   }
   
@@ -324,7 +324,7 @@ public static partial class Module
     public static void SendReminder(ReducerContext ctx, ScheduledTask task)
     {
         // Only allow the scheduler (module identity) to call this
-        if (ctx.Sender != ctx.Identity)
+        if (ctx.Sender != ctx.DatabaseIdentity)
         {
             throw new Exception("This reducer can only be called by the scheduler");
         }
@@ -352,7 +352,7 @@ pub struct ScheduledTask {
 #[reducer]
 fn send_reminder(ctx: &ReducerContext, task: ScheduledTask) {
     // Only allow the scheduler (module identity) to call this
-    if ctx.sender() != ctx.identity() {
+    if ctx.sender() != ctx.database_identity() {
         panic!("This reducer can only be called by the scheduler");
     }
     
@@ -381,7 +381,7 @@ SPACETIMEDB_SCHEDULE(scheduled_task, 1, send_reminder);
 
 SPACETIMEDB_REDUCER(send_reminder, ReducerContext ctx, ScheduledTask task) {
     // Only allow the scheduler (module identity) to call this
-    if (ctx.sender() != ctx.identity()) {
+    if (ctx.sender() != ctx.database_identity()) {
         return Err("This reducer can only be called by the scheduler");
     }
     
@@ -417,7 +417,7 @@ SPACETIMEDB_REDUCER(send_reminder, ReducerContext ctx, ScheduledTask task) {
 | `ConnectionId` | `ConnectionId?`       | Connection ID of the caller, if available       |
 | `Timestamp`    | `Timestamp`           | Time when the reducer was invoked               |
 | `Rng`          | `Random`              | Random number generator                         |
-| `Identity`     | `Identity`            | The module's identity                           |
+| `DatabaseIdentity` | `Identity`        | The module's identity                           |
 </TabItem>
 <TabItem value="rust" label="Rust">
 
@@ -430,7 +430,7 @@ SPACETIMEDB_REDUCER(send_reminder, ReducerContext ctx, ScheduledTask task) {
 
 **Methods:**
 
-- `identity() -> Identity` - Get the module's identity
+- `database_identity() -> Identity` - Get the module's identity
 - `rng() -> &StdbRng` - Get the random number generator
 - `random<T>() -> T` - Generate a single random value
 - `sender_auth() -> &AuthCtx` - Get authorization context for the caller (includes JWT claims and internal call detection)
@@ -446,7 +446,7 @@ SPACETIMEDB_REDUCER(send_reminder, ReducerContext ctx, ScheduledTask task) {
 
 **Methods:**
 
-- `identity() -> Identity` - Get the module's identity
+- `database_identity() -> Identity` - Get the module's identity
 - `rng() -> StdbRng&` - Get the random number generator (deterministic and reproducible)
 - `sender_auth() -> const AuthCtx&` - Get authorization context for the caller (includes JWT claims and internal call detection)
 
